@@ -1,0 +1,23 @@
+{
+    "name": "pocket-linux",
+    "private": true,
+    "version": "1.0.0",
+    "description": "Lightweight Linux CLI running in the browser (v86 + xterm.js) for practicing commands without a VM.",
+    "author": "Johnson",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "deploy": "vite build && gh-pages -d dist"
+    },
+    "devDependencies": {
+        "gh-pages": "^6.3.0",
+        "sass": "^1.108.2",
+        "vite": "^8.3.8"
+    },
+    "dependencies": {
+        "@xterm/xterm": "^6.0.0",
+        "v86": "^0.5.476"
+    }
+}
