@@ -1,0 +1,44 @@
+@use "variables" as *;
+
+.container{
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-left: $spacing-s;
+    padding-right: $spacing-s;
+}
+
+@media (max-width: 767px){
+    .container{
+        padding-left: $spacing-s * 0.5;
+        padding-right: $spacing-s * 0.5;
+    }
+}
+
+.lh-base{
+    line-height: $line-height-base;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.d-none{
+    display: none;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.min-vh-100{
+    min-height: 100vh;
+}
+
+.bg-color{
+    background: $bg-color;
+}

@@ -1,17 +1,23 @@
 import {V86} from "v86";
 import v86WasmUrl from "v86/build/v86.wasm?url";
 import {Terminal} from "@xterm/xterm";
+import {FitAddon} from "@xterm/addon-fit";
 
 const BASE = import.meta.env.BASE_URL;
 
 const term = new Terminal({
-    cols: 110,
-    rows: 32,
     cursorBlink: true,
-    fontSize: 15,
+    fontSize: (window.innerWidth < 576)? 12: 15,
     fontFamily: 'Consolas, "Courier New", monospace',
 });
+
+const fitAddon = new FitAddon();
+term.loadAddon(fitAddon);
+
 term.open(document.querySelector(".console"));
+fitAddon.fit();
+window.addEventListener("resize", () => fitAddon.fit());
+
 term.writeln("Loading Linux...");
 
 const emulator = new V86({

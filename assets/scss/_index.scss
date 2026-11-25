@@ -1,0 +1,11 @@
+@use "variables" as *;
+
+.console{
+    border: 5px solid $border-color;
+}
+
+@media (max-width: 767px){
+    .console{
+        border-width: 2px;
+    }
+}
