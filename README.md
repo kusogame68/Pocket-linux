@@ -42,12 +42,24 @@ cd Pocket-linux
 
 ### 2. Prerequisites
 
-* **Node.js 24** (LTS)
+* **Node.js 24.18.0**
+
+If you use nvm:
+
+```bash
+# macOS / Linux
+nvm install
+nvm use
+
+# Windows (PowerShell)
+nvm install (Get-Content .nvmrc)
+nvm use (Get-Content .nvmrc)
+```
 
 ### 3. Install Dependencies
 
 ```bash
-npm i
+npm ci
 ```
 
 ### 4. Run
@@ -65,12 +77,18 @@ Booting takes about 30 ~ 60 seconds. When `localhost login:` appears, log in as 
 ```
 Pocket-linux/
 ├── assets/
+│   ├── icon/
+│   │   └── favicon.svg
+│   │
 │   ├── js/
 │   │   └── console.js
 │   │
 │   └── scss/
-│       ├── _reset.scss
 │       ├── _base.scss
+│       ├── _index.scss
+│       ├── _reset.scss
+│       ├── _utils.scss
+│       ├── _variables.scss
 │       └── all.scss
 │
 ├── pages/
@@ -84,6 +102,9 @@ Pocket-linux/
 │   └── images/
 │       └── alpine.iso
 │
+├── .gitignore
+├── .npmrc
+├── .nvmrc
 ├── main.js
 ├── vite.config.js
 ├── package.json
