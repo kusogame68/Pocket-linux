@@ -99,8 +99,10 @@ Pocket-linux/
 │   │   ├── seabios.bin
 │   │   └── vgabios.bin
 │   │
-│   └── images/
-│       └── alpine.iso
+│   ├── images/
+│   │   └── alpine.iso
+│   │
+│   └── pocket-linux.png
 │
 ├── .gitignore
 ├── .npmrc
